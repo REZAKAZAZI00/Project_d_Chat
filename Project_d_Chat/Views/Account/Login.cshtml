@@ -1,0 +1,78 @@
+﻿@model LoginViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "ورود یه حساب کاربری";
+    Layout = null;
+}
+
+<!--===============================================================================================-->
+<link rel="icon" type="image/png" href="./Login_v16/images/icons/favicon.ico" />
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="./Login_v16/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="./Login_v16/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="./Login_v16/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="./Login_v16/vendor/animate/animate.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="./Login_v16/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="./Login_v16/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="./Login_v16/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="./Login_v16/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="./Login_v16/css/util.css">
+<link rel="stylesheet" type="text/css" href="./Login_v16/css/main.css">
+<!--===============================================================================================-->
+
+<div class="limiter">
+    <div class="container-login100" style="background-image: url('./Login_v16/images/bg-01.jpg');">
+        <div class="wrap-login100 p-t-30 p-b-50">
+            <span class="login100-form-title p-b-41">
+                ورود به حساب
+            </span>
+            @if (ViewBag.IsSuccess != null)
+            {
+                <div class="alert alert-success">
+                    <p class="help-block">ورود با موفقیت انجام شد</p>
+                </div>
+
+                <script>
+                    // Your delay in milliseconds
+                    var delay = 2000;
+                    setTimeout(function () { window.location = "https://localhost:7294/"; }, delay);
+                </script>
+            }
+            <form action="Login" method="post" class="login100-form validate-form p-b-33 p-t-5" >
+
+                <div class="wrap-input100 validate-input" >
+                    <input  class="input100" type="text"  asp-for="Username" placeholder="نام کاربری ">
+                    <span class="focus-input100 text-center text-danger" asp-validation-for="Username"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input" >
+                    <input class="input100"   type="password" asp-for="Password" placeholder="کلمه عبور">
+                    <span  class="focus-input100 text-danger text-center" asp-validation-for="Password" ></span>
+                </div>
+
+                <div class="container-login100-form-btn m-t-32">
+                    <button class="login100-form-btn">
+                        ورود 
+                    </button>
+                   
+                </div>
+                 <p class="text-center">  حساب کاربری نداری <a href="Register" class="text-danger">ثبت نام</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="dropDownSelect1"></div>
+
+
+

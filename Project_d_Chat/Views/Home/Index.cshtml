@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home page";
+}
+<link href="~/css/chat.css" rel="stylesheet" />
+@section Scripts
+    {
+    <script src="~/js/Chat.js"></script>
+}
+
+<div id="chatDialog" title="Chat With Support" class="disconnected">
+
+
+    <div id="chatMainPanel">
+        <ul id="chatHistory"></ul>
+        <div id="bottomPanel">
+            <div class="row">
+                <form id="chatForm">
+                    <div class="col-md-8">
+                        <input type="file" id="file" />
+                        <input id="messageTextBox" class="form-control" type="text" placeholder="پیام " />
+                    </div>
+                    <div class="col-md-2">
+                        <input type="submit" class="btn btn-success" value="ارسال" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

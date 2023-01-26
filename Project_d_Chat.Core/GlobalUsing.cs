@@ -1,0 +1,11 @@
+﻿global using System;
+global using System.Collections.Generic;
+global using System.Linq;
+global using System.Text;
+ global using System.Threading.Tasks;
+global using Project_d_Chat.Core.Services.InterFace;
+global using Project_d_Chat.DataLeaer.Entities.User;
+global using Project_d_Chat.DataLeaer.Context;
+global using System.ComponentModel.DataAnnotations;
+global using Project_d_Chat.Core.DTOs.User;
+global using Project_d_Chat.DataLeaer.Entities.Chat;
